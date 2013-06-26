@@ -15,52 +15,11 @@ class VoiceTranscriptionsController < ApplicationController
     render :inline => twilio_response.text
   end
 
-  # GET /voice_transcriptions/1
-  # GET /voice_transcriptions/1.json
-  def show
-  end
-
-  # GET /voice_transcriptions/new
-  def new
-    @voice_transcription = VoiceTranscription.new
-  end
-
-  # GET /voice_transcriptions/1/edit
-  def edit
-  end
-
   # POST /voice_transcriptions
   # POST /voice_transcriptions.json
   def create
     VoiceTranscription.create!(:content => params["TranscriptionText"])
-=begin
-    @voice_transcription = VoiceTranscription.new(voice_transcription_params)
-
-    respond_to do |format|
-      if @voice_transcription.save
-        format.html { redirect_to @voice_transcription, notice: 'Voice transcription was successfully created.' }
-        format.json { render action: 'show', status: :created, location: @voice_transcription }
-      else
-        format.html { render action: 'new' }
-        format.json { render json: @voice_transcription.errors, status: :unprocessable_entity }
-      end
-    end
-=end
     render :nothing => true
-  end
-
-  # PATCH/PUT /voice_transcriptions/1
-  # PATCH/PUT /voice_transcriptions/1.json
-  def update
-    respond_to do |format|
-      if @voice_transcription.update(voice_transcription_params)
-        format.html { redirect_to @voice_transcription, notice: 'Voice transcription was successfully updated.' }
-        format.json { head :no_content }
-      else
-        format.html { render action: 'edit' }
-        format.json { render json: @voice_transcription.errors, status: :unprocessable_entity }
-      end
-    end
   end
 
   # DELETE /voice_transcriptions/1
