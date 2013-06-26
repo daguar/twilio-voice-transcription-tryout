@@ -33,3 +33,7 @@ Deploying on Heroku
 - Now you're ready to roll! Call your phone number, leave a message when prompted, hang up, and load up the app URL in your browser. After a few seconds (depending on length) the transcribed message should appear.
 
 
+License
+---
+BSD License (see LICENSE.md for details)
+
