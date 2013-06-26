@@ -4,6 +4,7 @@ Automidnight::Application.routes.draw do
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
+  get '/' => 'voice_transcriptions#index'
   post '/' => 'voice_transcriptions#ask_for_response'
 
   # You can have the root of your site routed with "root"
